@@ -78,6 +78,8 @@ JOIN subjects ON (subjects.id = books.subject_id);
 
 * Find all shipments sorted by ship date display ONLY:
 
+	SELECT customers.first_name, customers.last_name, shipments.ship_date, books.title FROM books JOIN editions ON (books.id = editions.book_id)JOIN shipments ON (shipments.isbn = editions.isbn) JOIN customers ON (customers.id = shipments.customer_id);
+
 	SELECT ship_date FROM shipments;
 
 	* Customer first name
