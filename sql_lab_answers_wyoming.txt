@@ -116,4 +116,5 @@ JOIN subjects ON (subjects.id = books.subject_id);
 
 	SELECT edition FROM editions WHERE edition >1;
 
-
+ALL:
+SELECT books.title, authors.first_name, authors.last_name, editions.edition FROM books JOIN authors ON (books.author_id = authors.id) JOIN editions ON (books.id = editions.book_id) WHERE editions.edition >1;
